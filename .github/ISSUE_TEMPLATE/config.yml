@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/basalt-host/docs
+    about: Check the Basalt documentation for guides and answers to common questions.
+  - name: Website
+    url: https://basalt.host
+    about: Learn more about Basalt.

@@ -1,0 +1,57 @@
+name: Bug report
+description: Something in Basalt isn't working as expected
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please search existing issues before submitting to avoid duplicates.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: When I do X, Y happens instead of Z.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this behavior?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Basalt version
+      placeholder: e.g. 1.2.3
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform / OS
+      placeholder: e.g. Ubuntu 24.04, macOS 15, Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Paste any relevant log output or attach screenshots. Logs are automatically formatted as code.
+      render: shell
+    validations:
+      required: false

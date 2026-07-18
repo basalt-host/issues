@@ -1,0 +1,49 @@
+name: Template request
+description: Request a new game template for Basalt
+title: "[Template]: "
+labels: ["template", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new game template! Please search existing issues before submitting to avoid duplicates. Existing templates live in [basalt-host/templates](https://github.com/basalt-host/templates).
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      description: The game or server software you want a template for.
+      placeholder: e.g. Valheim, Rust, Terraria
+    validations:
+      required: true
+  - type: input
+    id: server-software
+    attributes:
+      label: Server software / distribution
+      description: The specific dedicated server implementation, if there is more than one.
+      placeholder: e.g. official dedicated server, Paper, tModLoader
+    validations:
+      required: false
+  - type: textarea
+    id: resources
+    attributes:
+      label: Links and resources
+      description: Links that help us build the template, such as the dedicated server download page, setup guides, or Docker images.
+      placeholder: |
+        - Server download: https://...
+        - Setup guide: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Important configuration
+      description: Anything notable about running this server, such as required ports, startup flags, config files, or resource requirements.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that helps us understand the request.
+    validations:
+      required: false
